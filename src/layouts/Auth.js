@@ -20,12 +20,12 @@ export default function Auth() {
   const [id, setId] = useState();
 
   useEffect(() => {
-    axios.get("http://localhost:3001/auth").then((response) => {
+    axios.get("https://deploywebautomations.herokuapp.com/auth").then((response) => {
        setLoggedIn(response.data);
     })
   },[])
   useLayoutEffect(() => {
-    axios.get("http://localhost:3001/user/getid").then((response) => {
+    axios.get("https://deploywebautomations.herokuapp.com/user/getid").then((response) => {
        setId(response.data);
     })
   },[])

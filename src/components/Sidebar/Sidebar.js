@@ -12,14 +12,14 @@ import axios from "axios";
 export default function Sidebar() {
 const [id, setId] = useState();
   useEffect(() => {
-    axios.get("http://localhost:3001/user/getid").then((response) => {
+    axios.get("https://deploywebautomations.herokuapp.com/user/getid").then((response) => {
        setId(response.data);
     })
   },[])
 
   const [name, setName] = useState();
   useEffect(() => {
-    axios.get("http://localhost:3001/user/getname").then((response) => {
+    axios.get("https://deploywebautomations.herokuapp.com/user/getname").then((response) => {
        setName(response.data);
     })
   },[])

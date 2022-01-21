@@ -9,7 +9,7 @@ const [username, a] = useState("");
 const [password, b] = useState("");
 
 const onSubmit = (data) => {
-    axios.post("http://localhost:3001/emailaccount", {
+    axios.post("https://deploywebautomations.herokuapp.com/emailaccount", {
         username: username, password: password
     }).then((response) => {
      console.log("it worked");

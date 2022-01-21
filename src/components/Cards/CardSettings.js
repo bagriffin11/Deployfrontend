@@ -23,12 +23,12 @@ const id = useContext(UserId);
   const [info, setInfo] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/user/byId/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/user/byId/${id}`).then((response) => {
        setUser(response.data);
        
     });
     
-    axios.get(`http://localhost:3001/info/byUserId/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/info/byUserId/${id}`).then((response) => {
        setInfo(response.data[0]);
     });
   },[]);
@@ -36,7 +36,7 @@ const id = useContext(UserId);
 
 
   const updateUser = (data) => {
-    axios.put(`http://localhost:3001/user/update/${id}`, {
+    axios.put(`https://deploywebautomations.herokuapp.com/user/update/${id}`, {
       fullname: fullname,
         email:email
 
@@ -46,7 +46,7 @@ const id = useContext(UserId);
 };
 
 const updateEducation = (data) => {
-  axios.put(`http://localhost:3001/info/updateeducation/${id}`, {
+  axios.put(`https://deploywebautomations.herokuapp.com/info/updateeducation/${id}`, {
     
       status: status, degree: degree, 
       college: college
@@ -57,7 +57,7 @@ const updateEducation = (data) => {
 };
 
 const updateLocation = (data) => {
-  axios.put(`http://localhost:3001/info/updatelocation/${id}`, {
+  axios.put(`https://deploywebautomations.herokuapp.com/info/updatelocation/${id}`, {
     
       city: city, 
       state: state, country: country

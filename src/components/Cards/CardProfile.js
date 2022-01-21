@@ -62,7 +62,7 @@ export default function CardProfile() {
   }
 
   const logOut = () => {
-    axios.post("http://localhost:3001/user/logout").then((response) => {
+    axios.post("https://deploywebautomations.herokuapp.com/user/logout").then((response) => {
     history.push("/");
     console.log("Logged out")
   });
@@ -72,12 +72,12 @@ export default function CardProfile() {
 
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/user/byId/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/user/byId/${id}`).then((response) => {
        setUser(response.data);
        console.log(response.data);
     });
     
-    axios.get(`http://localhost:3001/info/byUserId/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/info/byUserId/${id}`).then((response) => {
        setInfo(response.data[0]);
        console.log(response.data);
     });

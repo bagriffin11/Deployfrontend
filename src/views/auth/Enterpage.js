@@ -18,7 +18,7 @@ function Enterpage() {
   }
 
     const onSubmit = (data) => {
-        axios.post("http://localhost:3001/user/register", {
+        axios.post("https://deploywebautomations.herokuapp.com/user/register", {
           
             email: email
         }).then((response) => {

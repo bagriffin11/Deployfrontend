@@ -8,7 +8,7 @@ const [username, a] = useState("");
 const [password, b] = useState("");
 
 const onSubmit = (data) => {
-    axios.post("http://localhost:3001/fbaccount", {
+    axios.post("https://deploywebautomations.herokuapp.com/fbaccount", {
         username: username, password: password
     }).then((response) => {
      console.log("it worked");

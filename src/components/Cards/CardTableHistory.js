@@ -17,13 +17,13 @@ export default function CardTableHistory({ color }) {
 
 
   useEffect(() =>{
-    axios.get(`http://localhost:3001/task/gettask/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/task/gettask/${id}`).then((response) => {
       setTasks(response.data);
    })
   },[]);
 
   useEffect(() =>{
-    axios.get(`http://localhost:3001/task/taskhistorytotal/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/task/taskhistorytotal/${id}`).then((response) => {
       setTotal(response.data);
    })
   },[]);

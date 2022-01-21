@@ -25,7 +25,7 @@ export default function CardBusinessInfo() {
   };
 
   const onSubmit = () => {
-    axios.post("http://localhost:3001/business", {
+    axios.post("https://deploywebautomations.herokuapp.com/business", {
         business: business, igusername: igusername,
         igpassword: igpassword, fbusername: fbusername,
         fbpassword: fbpassword, emailusername: emailusername,

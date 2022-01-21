@@ -18,13 +18,13 @@ export default function CardTableTask({ color }) {
 
 
   useEffect(() =>{
-    axios.get(`http://localhost:3001/task/gettask/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/task/gettask/${id}`).then((response) => {
       setTasks(response.data);
    })
   },[]);
 
   useEffect(() =>{
-    axios.get(`http://localhost:3001/task/taskqueuetotal/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/task/taskqueuetotal/${id}`).then((response) => {
       setTotal(response.data);
    })
   },[]);
@@ -34,7 +34,7 @@ export default function CardTableTask({ color }) {
   };
 
   const deleteTask = (taskid) => {
-    axios.delete(`http://localhost:3001/task/delete/${taskid}`).then(()=> {
+    axios.delete(`https://deploywebautomations.herokuapp.com/task/delete/${taskid}`).then(()=> {
       history.push("/user/tasks")
     }); 
   };

@@ -31,19 +31,19 @@ const [name, setName] = useState("");
 
 
   useEffect(() => {
-    axios.get("http://localhost:3001/auth").then((response) => {
+    axios.get("https://deploywebautomations.herokuapp.com/auth").then((response) => {
        setLoggedIn(response.data);
     })
   },[])
 
   useEffect(() => {
-    axios.get("http://localhost:3001/user/getid").then((response) => {
+    axios.get("https://deploywebautomations.herokuapp.com/user/getid").then((response) => {
        setId(response.data);
     })
   },[])
 
   useEffect(() => {
-    axios.get("http://localhost:3001/user/getname").then((response) => {
+    axios.get("https://deploywebautomations.herokuapp.com/user/getname").then((response) => {
        setName(response.data);
     })
   },[])

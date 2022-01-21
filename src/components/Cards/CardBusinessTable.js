@@ -13,13 +13,13 @@ export default function CardBusinessTable() {
     const id = useContext(UserId);
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/business/getUserId/${id}`).then((response) => {
+        axios.get(`https://deploywebautomations.herokuapp.com/business/getUserId/${id}`).then((response) => {
            setBusinesses(response.data);
         })
       },[]);
 
       useEffect(() => {
-        axios.get(`http://localhost:3001/igaccount/getUserId/${id}`).then((response) => {
+        axios.get(`https://deploywebautomations.herokuapp.com/igaccount/getUserId/${id}`).then((response) => {
            setBusinesses(response.data);
         })
       },[]);
@@ -29,10 +29,10 @@ export default function CardBusinessTable() {
 };
 
       const deleteBusiness = (id) => {
-        axios.delete(`http://localhost:3001/business/delete/${id}`).then(()=> {
+        axios.delete(`https://deploywebautomations.herokuapp.com/business/delete/${id}`).then(()=> {
           history.push(`/user/accounts/${id}`)
         });
-        axios.delete(`http://localhost:3001/task/delete/${id}`).then(()=> {
+        axios.delete(`https://deploywebautomations.herokuapp.com/task/delete/${id}`).then(()=> {
           history.push(`/user/accounts/${id}`)
         });
         

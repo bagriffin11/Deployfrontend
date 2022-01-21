@@ -31,7 +31,7 @@ export default function CardTaskEditor() {
 
 
   useEffect(() =>{
-    axios.get(`http://localhost:3001/business/getUserId/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/business/getUserId/${id}`).then((response) => {
       setBusinesses(response.data);
    })
   },[]);
@@ -43,7 +43,7 @@ export default function CardTaskEditor() {
   };
 
   const onSubmit = () => {
-    axios.post("http://localhost:3001/task", {
+    axios.post("https://deploywebautomations.herokuapp.com/task", {
         business: business, account: account, 
         action: action, message: message, date: date,
          UserId: id, status: "pending", BusinessId: busid

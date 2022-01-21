@@ -19,7 +19,7 @@ export default function CardUserInfo() {
   const userid = useContext(UserId);
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3001/info", {
+    axios.post("https://deploywebautomations.herokuapp.com/info", {
       
         status: status, degree: degree, 
         college: college, city: city, 

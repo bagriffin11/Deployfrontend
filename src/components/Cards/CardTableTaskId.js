@@ -16,7 +16,7 @@ export default function CardTableTaskId({ color }) {
 
 
   useEffect(() =>{
-    axios.get(`http://localhost:3001/task/taskbusid/${id}`).then((response) => {
+    axios.get(`https://deploywebautomations.herokuapp.com/task/taskbusid/${id}`).then((response) => {
       setTasks(response.data);
    })
   },[]);
@@ -26,7 +26,7 @@ export default function CardTableTaskId({ color }) {
   };
  
   const deleteTask = (taskid) => {
-    axios.delete(`http://localhost:3001/task/delete/${taskid}`).then(()=> {
+    axios.delete(`https://deploywebautomations.herokuapp.com/task/delete/${taskid}`).then(()=> {
       history.push(`/user/business/${id}`)
     }); 
   };

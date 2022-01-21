@@ -26,7 +26,7 @@ export default function Register() {
 
     const onSubmit = (data) => {
     if (checked == true) {
-        axios.post("http://localhost:3001/user", {
+        axios.post("https://deploywebautomations.herokuapp.com/user", {
         fullname: fullname,
         email:email, password: password
     }).then((response) => {
