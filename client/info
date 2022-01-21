@@ -1,8 +1,0 @@
-ngrok can be used by opening the ngrokk folder found in desktop.
-open in terminal
-run ./ngrok http 3000 so others can view your app.
-npm i --save react-select   //react-select used in 
-//cardtaskeditor
-npm install react-datepicker --save
-npm install react-time-picker
-npm install react-google-login
