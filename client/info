@@ -6,3 +6,4 @@ npm i --save react-select   //react-select used in
 npm install react-datepicker --save
 npm install react-time-picker
 npm install react-google-login
+npm install 
