@@ -19,8 +19,8 @@ const id = useContext(UserId);
 useEffect(() =>{
   axios.get(`https://deploywebautomations.herokuapp.com/business/getUserId/${id}`).then((response) => {
     setBusinesses(response.data);
- })
-});
+ });
+},[]);
 
 
 
