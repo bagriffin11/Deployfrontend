@@ -35,13 +35,7 @@ export default function Login() {
       });
 };
 
-const handleFailure = (result) => {
- alert("Google login is currently unavailable.");
-}
 
-const handleLogin = (googleData) => {
-  console.log(googleData);
- }
  
 
 
@@ -59,13 +53,7 @@ const handleLogin = (googleData) => {
                 </div>
                 <div className="btn-wrapper text-center">
                 
-                  <GoogleLogin
-                    clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
-                    buttonText="Login with Google"
-                    onSuccess={handleLogin}
-                    onFailure={handleFailure}
-                    cookiePolicy={'single_host_origin'}
-                  />
+            
                 </div>
                 <hr className="mt-6 border-b-1 border-blueGray-300" />
               </div>
