@@ -21,7 +21,7 @@ export default function Login() {
   axios.defaults.withCredentials = true;
 
   const onSubmit = (data) => {
-      axios.post("http://api.deploywebautomations.com/user/login", {
+      axios.post("https://deploywebautomations.herokuapp.com/user/login", {
         
           email:email, password: password
       }).then((response) => {
@@ -36,7 +36,6 @@ export default function Login() {
 };
 
 
- 
 
 
   return (
@@ -53,7 +52,7 @@ export default function Login() {
                 </div>
                 <div className="btn-wrapper text-center">
                 
-            
+               
                 </div>
                 <hr className="mt-6 border-b-1 border-blueGray-300" />
               </div>
